@@ -1,11 +1,11 @@
 #include <stdio.h>
 int main()
 {
-    int i, j, min, temp, a, b;
+    int i, j, min, temp;
     int arr[] = {50, 12, 34, 5, 8};
     int n = 5;
 
-    for (int i = 0; i < n - 1; i++)
+    for (int i = 0; i < n - 1; i++)  //SELECTION SORT   
     {
         min = i; // Assumes that 1st element(i) of the unsorted part is smallest
 
@@ -15,6 +15,7 @@ int main()
             {
                 min = j;
             }
+            
         }
    
         
