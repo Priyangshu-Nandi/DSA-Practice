@@ -10,8 +10,10 @@ int main() {
      scanf("%d",&pos);
      printf("enter the element to add:");
       scanf("%d",&ele);
-
-      for(i=n-1;i>=pos-1;i--){
+                                      //    Why start from the back (i = *n)?  If you shift from left-to-right,
+                                       //   you will overwrite elements before moving them. Moving from right-to-left prevents data loss.
+                                        //  Why stop at i >= pos?  Because we only need to clear the spot at pos - 1 (index 1).
+        for(i=n-1;i>=pos-1;i--){
         arr[i+1]=arr[i];
       }
         arr[pos-1]=ele;
